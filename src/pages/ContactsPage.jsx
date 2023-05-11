@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { selectIsLoading, selectError } from 'redux/selectors';
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
+import { fetchContacts } from 'redux/tasks/operations';
+import { selectIsLoading, selectError } from 'redux/tasks/selectors';
+import ContactForm from 'components/ContactForm/ContactForm';
+import ContactList from 'components/ContactList/ContactList';
+import Filter from 'components/Filter/Filter';
 
 export const ContactsPage = () => {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import { React } from 'react';
 
 import style from '../Contacts/Contacts.module.css';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/tasks/operations';
 
 export const Contacts = ({ id, name, phone }) => {
   const dispatch = useDispatch();

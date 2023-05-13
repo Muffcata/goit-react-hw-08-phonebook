@@ -1,5 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
+import Container from '@mui/material/Container';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -13,20 +19,40 @@ export const LoginForm = () => {
         password: form.elements.password.value,
       })
     );
+
     form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <Container component="main" maxWidth="xs">
+      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Typography variant="h5" sx={{ textAlign: 'center' }}>
+          Sign In
+        </Typography>
+        <TextField
+          label="Email"
+          variant="standard"
+          name="email"
+          type="email"
+          autoComplete="off"
+          placeholder="Enter your email"
+          fullWidth
+          margin="normal"
+        />
+        <TextField
+          label="Password"
+          variant="standard"
+          name="password"
+          type="password"
+          autoComplete="off"
+          placeholder="Enter your password"
+          fullWidth
+          margin="normal"
+        />
+        <Button variant="contained" type="submit" size="large">
+          Log in
+        </Button>
+      </Box>
+    </Container>
   );
 };

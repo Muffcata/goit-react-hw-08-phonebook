@@ -11,17 +11,15 @@ export const RegisterForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
+    const { name, email, password } = e.target.elements;
     dispatch(
       register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
+        name: name.value,
+        email: email.value,
+        password: password.value,
       })
     );
-    form.reset();
   };
-
   return (
     <Container component="main" maxWidth="xs">
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -58,10 +56,10 @@ export const RegisterForm = () => {
           fullWidth
           margin="normal"
         />
+        <Button variant="contained" type="submit" size="large">
+          Sign Up
+        </Button>
       </Box>
-      <Button variant="contained" type="submit" size="large">
-        Sign Up
-      </Button>
     </Container>
   );
 };

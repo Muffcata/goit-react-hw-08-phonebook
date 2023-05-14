@@ -4,31 +4,37 @@ import Link from '@mui/material/Link';
 
 const styles = {
   link: {
-    marginLeft: '15px',
+    padding: '12px',
     position: 'relative',
+
+    '&:hover': {
+      color: '#6c3c77',
+    },
 
     '&.active::after': {
       content: '""',
       display: 'block',
-      height: '40px',
-      width: '40px',
-      borderRadius: '50%',
-      backgroundColor: '#be4d25',
+      width: 'calc(100% - 24px)',
+      height: '2px',
+      backgroundColor: '#6c3c77',
       position: 'absolute',
-      bottom: '0',
-      left: '0',
-      boxShadow: '0 0 10px 1px #be4d25',
-      opacity: 0.2,
+      bottom: '8px',
+      left: '12px',
+      boxShadow: '0 0 10px 1px #6c3c77',
+      opacity: 0.6,
     },
   },
 };
 export const AuthNav = () => {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-      <Link component={NavLink} to="/register">
+      <Link component={NavLink} to="/" sx={styles.link}>
+        Home
+      </Link>
+      <Link component={NavLink} to="/register" sx={styles.link}>
         Register
       </Link>
-      <Link component={NavLink} to="/login">
+      <Link component={NavLink} to="/login" sx={styles.link}>
         Login
       </Link>
     </Box>

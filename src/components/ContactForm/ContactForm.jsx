@@ -12,13 +12,13 @@ const ContactForm = () => {
     e.preventDefault();
     const form = e.target;
     const name = e.target.elements.name.value;
-    const phone = e.target.elements.phone.value;
+    const number = e.target.elements.number.value;
     const foundContant = contacts.find(contact => contact.name === name);
 
     if (foundContant) {
       return alert(name + 'is already in contacts.');
     } else {
-      dispatch(addContact({ name: name, phone: phone }));
+      dispatch(addContact({ name: name, number: number }));
     }
     form.reset();
   };
@@ -42,7 +42,7 @@ const ContactForm = () => {
           <input
             className={style.input_number}
             type="tel"
-            name="phone"
+            name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required

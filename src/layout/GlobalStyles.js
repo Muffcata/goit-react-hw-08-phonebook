@@ -16,9 +16,7 @@ export const GlobalStylesProvider = (
         overflowY: 'scroll',
         overflow: 'overlay',
       },
-      '.MuiTypography-root': {
-        color: 'black',
-      },
+
       scrollbarWidth: '5px',
       scrollbarColor: 'rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1)',
       '&::-webkit-scrollbar': {

@@ -8,20 +8,6 @@ const styles = {
   link: {
     marginLeft: '15px',
     position: 'relative',
-
-    '&.active::after': {
-      content: '""',
-      display: 'block',
-      height: '40px',
-      width: '40px',
-      borderRadius: '50%',
-      backgroundColor: '#6c3c77',
-      position: 'absolute',
-      bottom: '0',
-      left: '0',
-      boxShadow: '0 0 10px 1px #6c3c77',
-      opacity: 0.2,
-    },
   },
 };
 

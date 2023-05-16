@@ -31,9 +31,6 @@ const ContactForm = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        {/* <div className={style.form_wrapper}>
-      <form onSubmit={handleSubmit}> */}
-        {/* <label className={style.label}> */}
         <Typography variant="h5" sx={{ textAlign: 'left' }}>
           Contact Name
         </Typography>
@@ -49,8 +46,7 @@ const ContactForm = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-        {/* </label>
-        <label className={style.label}> */}
+
         <Typography variant="h5" sx={{ textAlign: 'left' }}>
           Contact Number
         </Typography>
@@ -69,9 +65,6 @@ const ContactForm = () => {
         <Button variant="contained" size="medium" type="submit">
           Add Contact
         </Button>
-        {/* </label> */}
-        {/* </form> */}
-        {/* </div> */}
       </Box>
     </Container>
   );

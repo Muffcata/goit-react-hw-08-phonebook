@@ -42,3 +42,6 @@
 .name {
   display: flex;
 }
+.box {
+  padding-top: 100px;
+}

@@ -5,12 +5,12 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { selectError } from 'redux/tasks/selectors';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 import Container from '@mui/material/Container';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
+  // const error = useSelector(selectError);
 
   const handleSubmit = e => {
     e.preventDefault();

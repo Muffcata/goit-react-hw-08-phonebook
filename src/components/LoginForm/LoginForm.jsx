@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';

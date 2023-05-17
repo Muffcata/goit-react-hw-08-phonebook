@@ -12,7 +12,7 @@ export const Contacts = ({ id, name, number }) => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box component="form" noValidate sx={{ mt: 3 }} key={id}>
+      <Box component="form" noValidate sx={{ mt: 5 }} key={id}>
         <Typography variant="h5" sx={{ textAlign: 'left' }}>
           {`${name}: ${number}`}
         </Typography>

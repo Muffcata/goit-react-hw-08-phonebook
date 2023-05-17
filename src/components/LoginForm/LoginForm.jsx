@@ -1,14 +1,16 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-
+import { selectError } from 'redux/tasks/selectors';
+import Notiflix from 'notiflix';
 import Container from '@mui/material/Container';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectError);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -53,6 +55,7 @@ export const LoginForm = () => {
           Log in
         </Button>
       </Box>
+      {/* {error && Notiflix.Notify.failure('Oops, wrong login or password')} */}
     </Container>
   );
 };

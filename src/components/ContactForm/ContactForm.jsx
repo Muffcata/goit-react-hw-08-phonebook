@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 import { addContact } from 'redux/tasks/operations';
-
 import { selectContacts } from 'redux/tasks/selectors';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+
 import Button from '@mui/material/Button';
 
 const ContactForm = () => {
@@ -31,9 +30,6 @@ const ContactForm = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        <Typography variant="h5" sx={{ textAlign: 'left' }}>
-          Contact Name
-        </Typography>
         <TextField
           type="text"
           placeholder="Enter contact name"
@@ -47,9 +43,6 @@ const ContactForm = () => {
           required
         />
 
-        <Typography variant="h5" sx={{ textAlign: 'left' }}>
-          Contact Number
-        </Typography>
         <TextField
           type="tel"
           placeholder="Enter contact number"

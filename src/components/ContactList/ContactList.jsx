@@ -2,7 +2,8 @@ import React from 'react';
 import { Contacts } from 'components/Contacts/Contacts';
 import { selectContacts, selectFilter } from 'redux/tasks/selectors';
 import { useSelector } from 'react-redux';
-import style from 'components/Contacts/Contacts.module.css';
+
+import Box from '@mui/material/Box';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -12,7 +13,7 @@ const ContactList = () => {
   );
 
   return (
-    <ul className={style.wrapper}>
+    <Box component="form" noValidate sx={{ mt: 2 }}>
       {filteredContacts.map(contact => (
         <Contacts
           key={contact.id}
@@ -21,7 +22,7 @@ const ContactList = () => {
           number={contact.number}
         />
       ))}
-    </ul>
+    </Box>
   );
 };
 

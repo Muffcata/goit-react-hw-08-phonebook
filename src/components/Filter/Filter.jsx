@@ -17,7 +17,7 @@ const Filter = () => {
   };
   return (
     <Container component="main" maxWidth="xs">
-      <Box component="form" noValidate sx={{ mt: 1 }}>
+      <Box component="form" noValidate sx={{ mt: 8 }}>
         <Typography variant="h5" sx={{ textAlign: 'left' }}>
           Contacts finder
         </Typography>

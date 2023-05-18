@@ -8,8 +8,7 @@ import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 import Icon from 'images/685cceffa93afa89416c4345481bf834.png';
 import Typography from '@mui/material/Typography';
-// import Loader from 'components/Loader/Loader';
-// import Notiflix from 'notiflix';
+import Loader from 'components/Loader/Loader';
 
 export const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -21,17 +20,17 @@ export const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <Typography variant="h5" align="center" mb={6}>
         <img src={Icon} alt="phonebook icon" width="130" height="130" />
-        Add your contacts here:
+        <p>Add your contacts</p>
       </Typography>
       <ContactForm />
       <Filter />
       <ContactList />
 
-      {isLoading && !error && <p>Ref</p>}
-    </div>
+      {isLoading && !error && <Loader />}
+    </>
   );
 };
 

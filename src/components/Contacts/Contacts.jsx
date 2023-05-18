@@ -16,7 +16,6 @@ export const Contacts = ({ id, name, number }) => {
         <Typography variant="h5" sx={{ textAlign: 'left' }}>
           {`${name}: ${number}`}
         </Typography>
-
         <Button
           variant="contained"
           size="small"
@@ -25,16 +24,7 @@ export const Contacts = ({ id, name, number }) => {
         >
           Delete
         </Button>
-
-        {/* <button
-          className={style.button}
-          type="button"
-          onClick={() => dispatch(deleteContact(id))}
-        >
-          Delete
-        </button> */}
       </Box>
-      {/* </div> */}
     </Container>
   );
 };

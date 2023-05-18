@@ -2,7 +2,6 @@ import React from 'react';
 import { Contacts } from 'components/Contacts/Contacts';
 import { selectContacts, selectFilter } from 'redux/tasks/selectors';
 import { useSelector } from 'react-redux';
-
 import Box from '@mui/material/Box';
 
 const ContactList = () => {
@@ -13,7 +12,7 @@ const ContactList = () => {
   );
 
   return (
-    <Box component="form" noValidate sx={{ mt: 2 }}>
+    <Box noValidate sx={{ mt: 2 }}>
       {filteredContacts.map(contact => (
         <Contacts
           key={contact.id}

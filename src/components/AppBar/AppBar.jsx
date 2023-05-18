@@ -3,6 +3,7 @@ import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from 'hooks';
 import style from 'components/AppBar/AppBar.module.css';
+
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 

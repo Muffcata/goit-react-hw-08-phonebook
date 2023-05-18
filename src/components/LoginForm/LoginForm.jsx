@@ -4,13 +4,10 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-// import { selectError } from 'redux/tasks/selectors';
-// import Notiflix from 'notiflix';
 import Container from '@mui/material/Container';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  // const error = useSelector(selectError);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -23,39 +20,41 @@ export const LoginForm = () => {
     );
 
     form.reset();
+    // alert('Oops, something went wrong! Please, complete all fields');
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        <Typography variant="h5" sx={{ textAlign: 'center' }}>
-          Sign In
-        </Typography>
-        <TextField
-          label="Email"
-          variant="standard"
-          name="email"
-          type="email"
-          autoComplete="off"
-          placeholder="Enter your email"
-          fullWidth
-          margin="normal"
-        />
-        <TextField
-          label="Password"
-          variant="standard"
-          name="password"
-          type="password"
-          autoComplete="off"
-          placeholder="Enter your password"
-          fullWidth
-          margin="normal"
-        />
-        <Button variant="contained" type="submit" size="large">
-          Log in
-        </Button>
-      </Box>
-      {/* {error && Notiflix.Notify.failure('Oops, wrong login or password')} */}
-    </Container>
+    <>
+      <Container component="main" maxWidth="xs">
+        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Typography variant="h5" sx={{ textAlign: 'center' }}>
+            Sign In
+          </Typography>
+          <TextField
+            label="Email"
+            variant="standard"
+            name="email"
+            type="email"
+            autoComplete="email"
+            placeholder="Enter your email"
+            fullWidth
+            margin="normal"
+          />
+          <TextField
+            label="Password"
+            variant="standard"
+            name="password"
+            type="password"
+            autoComplete="password"
+            placeholder="Enter your password"
+            fullWidth
+            margin="normal"
+          />
+          <Button variant="contained" type="submit" size="large">
+            Log in
+          </Button>
+        </Box>
+      </Container>
+    </>
   );
 };

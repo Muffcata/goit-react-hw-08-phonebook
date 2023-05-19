@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
-const styles = {
+export const styles = {
   link: {
     padding: '12px',
     position: 'relative',
@@ -28,9 +28,6 @@ const styles = {
 export const AuthNav = () => {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-      <Link component={NavLink} to="/" sx={styles.link}>
-        Home
-      </Link>
       <Link component={NavLink} to="/register" sx={styles.link}>
         Register
       </Link>

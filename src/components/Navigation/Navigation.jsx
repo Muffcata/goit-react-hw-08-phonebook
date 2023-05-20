@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from 'hooks';
 import Link from '@mui/material/Link';
-
 import { Box } from '@mui/material';
 import { styles } from 'components/AuthNav/AuthNav';
 

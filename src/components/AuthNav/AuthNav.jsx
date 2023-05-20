@@ -16,6 +16,7 @@ export const styles = {
       display: 'block',
       width: 'calc(100% - 24px)',
       height: '2px',
+
       backgroundColor: '#6c3c77',
       position: 'absolute',
       bottom: '8px',
